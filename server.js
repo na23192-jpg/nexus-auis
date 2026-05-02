@@ -19,7 +19,8 @@ const { createUploadthing, createRouteHandler } = require("uploadthing/express")
 const { UTApi } = require("uploadthing/server");
 
 const app = express();
-const utapi = new UTApi({ token: process.env.UPLOADTHING_TOKEN });
+const utapi = process.env.UPLOADTHING_TOKEN ? new UTApi({ token: process.env.UPLOADTHING_TOKEN }) : null;
+if (!utapi) console.warn("⚠️ Warning: UPLOADTHING_TOKEN is missing. Uploads will fail.");
 
 
 

@@ -1,1 +1,1 @@
-Fix Vercel deployment routing  
+Safe init for UTApi  
