@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "installCommand": "npm install --legacy-peer-deps",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/server.js" }
+  ]
+}

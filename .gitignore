@@ -1,0 +1,7 @@
+node_modules/
+.env
+.vscode/
+test-*.js
+test.txt
+migrate.js
+package-lock.json
