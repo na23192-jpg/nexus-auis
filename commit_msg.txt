@@ -1,1 +1,1 @@
-Initial commit: Clean and secure AUIS Resource Hub  
+Fix Vercel deployment routing  
