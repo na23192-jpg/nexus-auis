@@ -1,1 +1,1 @@
-Safe init for UTApi  
+Ultimate Express mode for Vercel  
