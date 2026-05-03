@@ -16,7 +16,7 @@ const { createUploadthing, createRouteHandler } = require("uploadthing/express")
 
 
 // UploadThing
-const { UTApi } = require("uploadthing/server");
+
 
 const app = express();
 const utapi = process.env.UPLOADTHING_TOKEN ? new UTApi({ token: process.env.UPLOADTHING_TOKEN }) : null;
@@ -81,7 +81,7 @@ let isConnected = false;
 const connectDB = async () => {
   if (isConnected) return;
   try {
-    await mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 5000 });
+    await mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 5000, family: 4 });
     isConnected = true;
     console.log("✅ MongoDB connected");
   } catch (err) { console.error("❌ MongoDB error:", err); }
